@@ -1,118 +1,207 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
 }
 
 h1 {
   text-align: center;
-  color: #444;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 /* Note Form Styles */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 input[type="text"],
 textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
 }
 
 input[type="text"] {
-  height: 40px;
+  height: 45px;
 }
 
 textarea {
-  height: 100px;
+  height: 120px;
   resize: vertical;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 12px 20px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 /* Note List Styles */
 .note-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .note {
-  background-color: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.note:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .note h3 {
-  margin: 0;
-  color: #007bff;
+  margin: 0 0 10px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .note p {
   margin: 0;
   color: #555;
+  font-size: 1rem;
 }
 
 .note-buttons {
   display: flex;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .note-buttons button {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.note-buttons button:first-child {
   background-color: #28a745;
+}
+
+.note-buttons button:first-child:hover {
+  background-color: #218838;
 }
 
 .note-buttons button:last-child {
   background-color: #dc3545;
 }
 
-.note-buttons button:hover {
-  opacity: 0.9;
+.note-buttons button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0056b3;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
   .app {
-    padding: 10px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   input[type="text"],
   textarea,
   button {
     font-size: 14px;
+  }
+
+  .note h3 {
+    font-size: 1.3rem;
+  }
+
+  .note p {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }

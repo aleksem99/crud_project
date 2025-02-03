@@ -37,8 +37,19 @@ const App = () => {
       <h1>Notes App</h1>
       <NoteForm addNote={addNote} editingNote={editingNote} updateNote={updateNote} />
       <NoteList notes={notes} deleteNote={deleteNote} setEditingNote={setEditingNote} />
+      <footer>
+              <p>
+                Designed by <strong>Aleks Iliev</strong> using React & Node.js & PostgreSQL for <strong>Evolves LTD</strong>.
+                <br />
+                <a href="https://github.com/aleksem99/crud_project" target="_blank" rel="noopener noreferrer">
+                  View on GitHub
+                </a>
+              </p>
+            </footer>
     </div>
   );
+
+
 };
 
 export default App;
