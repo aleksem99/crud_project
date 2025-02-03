@@ -7,7 +7,7 @@ A simple CRUD application built with React (frontend) and Node.js with PostgreSQ
 1. **Backend**:
    - Navigate to the `backend` folder.
    - Install dependencies: `npm install`.
-   - Set up a PostgreSQL database named `notesdb` and create the `notes` table.
+   - Set up a PostgreSQL database named `server5` and create the `notes` table.
    - Start the server: `npm start`.
 
 2. **Frontend**:
