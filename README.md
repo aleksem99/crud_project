@@ -1,6 +1,6 @@
 # Notes App
 
-A simple CRUD application built with React (frontend) and Node.js with PostgreSQL (backend).
+A simple CRUD application built with React (frontend) and Node.js (Express) with PostgreSQL (backend).
 
 ## Setup
 
